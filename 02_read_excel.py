@@ -163,9 +163,11 @@ def read_excel_nrows():
 
 
 def read_excel_thousands():
-    """thousands:千位分隔符，默认为None
-                 只对非数值类型的数字字符串起作用
-                 若文本类型的数值（如：1,000）没有设置thousands，会识别为object"""
+    """
+    thousands:千位分隔符，默认为None
+        只对非数值类型的数字字符串起作用
+        若文本类型的数值（如：1,000）没有设置thousands，会识别为object
+    """
     df = pd.read_excel(io="test.xlsx")
     print(df.dtypes["销售额"])
     df = pd.read_excel(io="test.xlsx", thousands=",")
